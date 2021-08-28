@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane fx:id="rootControl"  xmlns:fx="http://javafx.com/fxml/1" id="EntityCollectionView"
+            prefHeight="400.0" prefWidth="600.0"
+             fx:controller="org.ifraytech.tools.ui.EntityCollectionViewController">
+    <top>
+        <ToolBar >
+            <items>
+                <Label text="Package" />
+                <TextField fx:id="txtNamespace" promptText="Enter package name to use for generated classes"  />
+                <Separator  />
+                <Label text="Store generated files at"  />
+                <TextField prefColumnCount="25"  fx:id="txtOutputDirectory"  />
+                <Button onAction="#browseForOutput">...</Button>
+                <Separator  />
+                <CheckBox  text="Overwrite existing file" selected="true" fx:id="chkOverwrite"   />
+                <Separator  />
+                <Button onAction="#doGenerate">
+                    Generate
+                </Button>
+                
+                <Button onAction="#doGenerateSlickMapping">
+                    Generate Slick Mappings
+                </Button>
+            </items>
+        </ToolBar>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.4,0.6" >
+            
+          <BorderPane>
+                <top>
+                    <HBox spacing="8">
+                        <padding>
+                            <javafx.geometry.Insets top="4" bottom="4" left="4"    />
+                        </padding>
+                        <Button fx:id="btnAdd" disable="${controller.isBusy}"  onAction="#addEntity" text="+">
+                        </Button>
+                        <Button fx:id="btnRemove" disable="${controller.isBusy}" onAction="#removeSelectedEntity" text="-">
+                        </Button>
+                    </HBox>
+                </top>
+                <center>
+                    <TitledPane BorderPane.alignment="TOP_LEFT"  text="Entities" >
+                        <content>
+                            <ListView editable="false" fx:id="lstEntities">
+                                <BorderPane.margin>
+                                    <javafx.geometry.Insets top="4" right="4" bottom="4" left="4"    />
+                                </BorderPane.margin>
+                            </ListView>
+                        </content>
+                    </TitledPane>
+                    
+                </center>
+            </BorderPane>
+            <fx:include  source="EntityTableView.fxml" fx:id="entityDetails"/>
+        </SplitPane>
+    </center>
+    <bottom>
+        <BorderPane >
+            <top>
+                <ProgressBar fx:id="progressBar" prefWidth="Infinity" progress="0"   />
+            </top>
+            <center>
+                <TitledPane BorderPane.alignment="TOP_LEFT"  text="Output">
+                    <content>
+                        <TextArea fx:id="txtOutput" editable="false"   />
+                    </content>
+                </TitledPane>
+            </center>
+        </BorderPane>
+        
+    </bottom>
+</BorderPane>

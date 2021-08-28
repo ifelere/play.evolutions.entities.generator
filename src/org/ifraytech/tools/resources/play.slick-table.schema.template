@@ -1,0 +1,52 @@
+package $schemaPackageName
+
+
+import ${entitiesPackage}._
+import scala.reflect.ClassTag
+import slick.jdbc.JdbcProfile
+import slick.jdbc.${slickProfile}.api._
+
+#foreach ($imp in $additionalImports)
+import $imp
+#end
+
+#if ($extensions.size() == 0)
+
+object $wrapperClassName {
+
+#else
+#foreach ($ext in $extensions)
+#if ($foreach.first)
+object $wrapperClassName extends $ext
+#else
+with $ext
+#end
+#end
+{
+#end
+    
+
+    #foreach ($entity in $collection.getEntities())
+        //---- Start ${entity.getProgramName()} table
+        class ${entity.getProgramName()}Table(tag: Tag) extends Table[${entity.getProgramName()}](tag, "${entity.getName()}") {
+            #foreach ($attr in $entity.getAttributes())
+            def ${helper.programName($attr.getName(), true)} = column[${helper.columnType($attr)}]("${attr.getName()}" $helper.attributeOptions($attr))
+            #end
+
+            override def * = (
+                    #foreach ($attr in $entity.getAttributes())
+                    ${helper.renderProjectionAttribute($attr)}#if ($foreach.hasNext),#end    
+                    #end
+                    ) <> (${entity.getProgramName()}.tupled, ${entity.getProgramName()}.unapply )
+                    
+        }
+
+        lazy val ${helper.tableVariableName($entity)}Query = TableQuery[${entity.getProgramName()}Table]
+        
+        //---- End ${entity.getProgramName()} table
+
+        
+
+    #end
+
+}

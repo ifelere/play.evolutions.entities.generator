@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ui/ExportSlickMappingDialog.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/SQLSchemaParser.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ui/EntityCollectionViewController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ScalaVelocityEntityWriter.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ui/SlickMappingOptions.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/SlickMappingGenerator.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/SlickMappingVelocityHelper.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ui/EntityTableViewController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ScalaGenerationHelper.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ui/SlickMappingDialogContent.fxml</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ui/SlickMappingDialogContentController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/resources/play.slick-table.schema.template</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/play.evolutions.entities.generator/src/org/ifraytech/tools/ScalaSlickMappingGenerator.java</file>
+        </group>
+    </open-files>
+</project-private>

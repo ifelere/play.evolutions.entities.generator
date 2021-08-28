@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<types>
+    <type name="String" formatString="&quot;%s&quot;" dbTypes="varchar nvarchar text char"></type>
+    
+    <type name="java.time.LocalDate" formatString="&quot;%s&quot;" dbTypes="date"></type>
+    
+    <type name="java.time.LocalDateTime" formatString="&quot;%s&quot;" dbTypes="datetime timestamp"></type>
+    
+    <type name="Boolean" formatString="%s" dbTypes="bool bit boolean"></type>
+    
+    <type name="Long" formatString="%s" dbTypes="long bigint"></type>
+    
+    <type name="Int" formatString="%s" dbTypes="int integer smallint"></type>
+    
+    <type name="Float" formatString="%s" dbTypes="float real"></type>
+    
+    <type name="java.math.BigDecimal" formatString="%s" dbTypes="decimal"></type>
+    
+    <type name="java.time.Duration" formatString="&quot;%s&quot;" dbTypes="interval"></type>
+    
+</types>

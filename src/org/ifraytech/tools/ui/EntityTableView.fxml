@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ifraytech.tools.ui.EntityTableViewController">
+    <top>
+        <HBox spacing="5">
+            <padding>
+                <javafx.geometry.Insets bottom="4" top="4" left="4"  /> 
+            </padding>
+            <Label text="Entity name"  />
+            <TextField editable="false" prefWidth="300"   fx:id="txtEntityName" />
+        </HBox>
+    </top>
+    <center>
+        <TitledPane BorderPane.alignment="TOP_LEFT"  text="Attributes">
+           <content>
+               <TableView editable="true"  fx:id="tableAttributes">
+                    <columns>
+                        <TableColumn fx:id="colKey" text="" editable="false"   />
+                        <TableColumn fx:id="colName" text="Name" editable="false" prefWidth="300"    />
+                        <TableColumn fx:id="colOptional" text="Optional" editable="true"   />
+                        <TableColumn fx:id="colDefault" text="Default value" editable="true" prefWidth="150"    />                
+                        <TableColumn fx:id="colType" text="Type" prefWidth="250"  editable="true"   />
+                        <TableColumn fx:id="colUserType" text="User Type" prefWidth="250"  editable="true"   />
+                    </columns>
+                </TableView>
+           </content> 
+        </TitledPane>        
+    </center>
+</BorderPane>
